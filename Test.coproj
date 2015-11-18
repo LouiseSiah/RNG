@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Project version="2G - 2.0.2" name="Test">
+<Project version="2G - 2.0.2" name="RNG">
   <Target name="Test" isCurrent="1">
     <Device manufacturerId="9" manufacturerName="ST" chipId="287" chipName="STM32F429ZI" boardId="" boardName="" coreId="4" coreName="Cortex M4"/>
     <BuildOption>
@@ -16,6 +16,7 @@
         <DefinedSymbols>
           <Define name="STM32F429ZI"/>
           <Define name="STM32F429xx"/>
+          <Define name="STM32F429_439xx"/>
         </DefinedSymbols>
       </Compile>
       <Link useDefault="0">
@@ -60,7 +61,7 @@
       <Option name="org.coocox.codebugger.gdbjtag.core.ifCacheRom" value="1"/>
       <Option name="org.coocox.codebugger.gdbjtag.core.ipAddress" value="127.0.0.1"/>
       <Option name="org.coocox.codebugger.gdbjtag.core.portNumber" value="2009"/>
-      <Option name="org.coocox.codebugger.gdbjtag.core.autoDownload" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.autoDownload" value="0"/>
       <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
       <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Effected"/>
       <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="C:\Users\D203C-01\AppData\Roaming\CooCox\CoIDE\config\flash\CooCox-Flash\CoIDE_STM32F4xx_2048K\STM32F4xx_2048.elf"/>
@@ -70,16 +71,23 @@
   <Components path="./"/>
   <LocalComponents/>
   <Files>
-    <File name="STMPE811/stm32f4xx_gpio.h" path="../STMPE811/app/Download/stm32f4xx_gpio.h" type="1"/>
-    <File name="STMPE811/defines.h" path="../STMPE811/app/defines.h" type="1"/>
-    <File name="STMPE811/stm32f4xx_spi.h" path="../STMPE811/app/Download/stm32f4xx_spi.h" type="1"/>
-    <File name="STMPE811/stm32f4xx_i2c.h" path="../STMPE811/app/Download/stm32f4xx_i2c.h" type="1"/>
-    <File name="STMPE811/tm_stm32f4_fonts.h" path="../STMPE811/app/Download/tm_stm32f4_fonts.h" type="1"/>
-    <File name="STMPE811/tm_stm32f4_stmpe811.h" path="../STMPE811/app/STMPE811_file/tm_stm32f4_stmpe811.h" type="1"/>
-    <File name="STMPE811/tm_stm32f4_spi.h" path="../STMPE811/app/Download/tm_stm32f4_spi.h" type="1"/>
-    <File name="STMPE811/tm_stm32f4_gpio.h" path="../STMPE811/app/Download/tm_stm32f4_gpio.h" type="1"/>
-    <File name="STMPE811" path="" type="2"/>
-    <File name="STMPE811/tm_stm32f4_ili9341.h" path="../STMPE811/app/tm_stm32f4_ili9341.h" type="1"/>
+    <File name="app/main.c" path="app/main.c" type="1"/>
+    <File name="app/Rcc.c" path="app/Rcc.c" type="1"/>
+    <File name="Config/system_stm32f4xx.c" path="app/Config/system_stm32f4xx.c" type="1"/>
+    <File name="app" path="" type="2"/>
+    <File name="Core/core_cm4.h" path="app/Core/core_cm4.h" type="1"/>
+    <File name="app/RNG.h" path="app/RNG.h" type="1"/>
+    <File name="Core/core_cmFunc.h" path="app/Core/core_cmFunc.h" type="1"/>
+    <File name="app/RNG.c" path="app/RNG.c" type="1"/>
+    <File name="Config/stm32f429xx.h" path="app/Config/stm32f429xx.h" type="1"/>
+    <File name="Config/startup_stm32f429xx.s" path="app/Config/startup_stm32f429xx.s" type="1"/>
+    <File name="Core/core_cmSimd.h" path="app/Core/core_cmSimd.h" type="1"/>
+    <File name="Config/system_stm32f4xx.h" path="app/Config/system_stm32f4xx.h" type="1"/>
+    <File name="Core" path="" type="2"/>
+    <File name="Config/stm32f4xx.h" path="app/Config/stm32f4xx.h" type="1"/>
+    <File name="Core/core_cmInstr.h" path="app/Core/core_cmInstr.h" type="1"/>
+    <File name="Config" path="" type="2"/>
+    <File name="app/Rcc.h" path="app/Rcc.h" type="1"/>
   </Files>
   <Bookmarks/>
 </Project>
